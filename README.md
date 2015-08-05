@@ -1,4 +1,4 @@
-
+### Install
 create file /etc/jiraconfig
 
 ```javascript
@@ -13,3 +13,6 @@ create file /etc/jiraconfig
 - git clone https://github.com/houleitaidii/taidiijiracmd.git
 - cd taidiijiracmd
 - sudo npm install -g
+
+### How to use
+jira number-1 number-2

@@ -9,3 +9,7 @@
   "pwd":""
 }
 ```
+
+git clone https://github.com/houleitaidii/taidiijiracmd.git
+cd taidiijiracmd
+sudo npm install -g

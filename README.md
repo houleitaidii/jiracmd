@@ -1,5 +1,5 @@
 
-> create file /etc/jiraconfig
+create file /etc/jiraconfig
 
 ```javascript
 {
@@ -10,6 +10,6 @@
 }
 ```
 
->git clone https://github.com/houleitaidii/taidiijiracmd.git
->cd taidiijiracmd
->sudo npm install -g
+- git clone https://github.com/houleitaidii/taidiijiracmd.git
+- cd taidiijiracmd
+- sudo npm install -g

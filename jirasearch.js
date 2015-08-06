@@ -24,13 +24,14 @@ if(!program.args.length){
 				console.log(error);
 				process.exit(1);
 			}else{
+				// console.log(issue);
 				var comments = issue.fields.comment.comments;
 				var str_comment = "";
 				var comment_length = comments.length;
 				for(var c=comment_length-1;c>=0;c--){
 					comment = comments[c];
 					updated = utils.YYYYMMDDHHmmss(new Date(comment.updated));
-					str_comment += chalk.gray(updated) + "\n";
+					str_comment += chalk.yellow(updated) + "\n";
 					str_comment += comment.updateAuthor.name + ":"
 								 + comment.body + "\n";
 				}
@@ -38,11 +39,15 @@ if(!program.args.length){
 				var result = "";
 				result += chalk.cyan.bold(issue.key) + " " ;
 				result += chalk.magenta.bold(issue.fields.priority.name + " " 
-							+ issue.fields.issuetype.name) + "\n";
+							+ issue.fields.issuetype.name + " " + issue.fields.status.name) + "\n";
+				
 				result += chalk.red.bold(issue.fields.reporter.name + "->" 
-						+ issue.fields.assignee.name) + " ";
-				result += issue.fields.status.name + "\n";
-				result += chalk.bold("Description:\n    ") + chalk.gray.bold(issue.fields.description) + "\n";
+						+ issue.fields.assignee.name) + " \n";
+				
+				result += chalk.bold("Summary:") + "\n    ";
+				result += issue.fields.summary + "\n";
+				
+				result += chalk.bold("Description:\n    ") + issue.fields.description + "\n";
 				result += chalk.bold("Comments(↓):\n");
 
 				result += str_comment;

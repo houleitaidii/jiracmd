@@ -7,10 +7,10 @@ var JiraApi = require('jira').JiraApi;
 var chalk = require('chalk');
 var utils = require('utility');
 
-program.version('0.0.1')
+program.version('1.0')
 		.usage('search jira via commander')
-		.option('-m, --comment [value]', 'Add comments')
-		.option('-u, --users [value]', 'get users list')
+		.option('-m, --comment [value]', 'apply comments.')
+		.option('-u, --users [value]', 'get users list.')
 		.parse(process.argv)
 
 // console.log(program.args);

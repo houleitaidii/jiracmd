@@ -1,6 +1,7 @@
 ### Install
-create file /etc/jiraconfig
+for linux/mac os:create file /etc/jiraconfig
 
+for windows user:create file: c:\jiraconfig
 ```javascript
 {
   "host":"",

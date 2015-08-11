@@ -6,6 +6,7 @@ var request = require("request");
 var JiraApi = require('jira').JiraApi;
 var chalk = require('chalk');
 var utils = require('utility');
+var os = require("os");
 
 program.version('1.0')
 		.usage('search jira via commander')
@@ -18,7 +19,9 @@ program.version('1.0')
 // process.exit(1);
 
 function getConfig(){
-	var configFile = fs.readFileSync('/etc/jiraconfig','utf-8');
+	var os_platform = os.platform();
+	var config_file_path = os_platform.indexOf('win',0) === 0 ? "c:\\jiraconfig" : "/etc/jiraconfig";
+	var configFile = fs.readFileSync(config_file_path,'utf-8');
 	var json_config = JSON.parse(configFile);
 	var jira = new JiraApi('http', json_config.host, json_config.port, json_config.user, json_config.pwd, '2');
 	return jira;

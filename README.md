@@ -17,4 +17,5 @@ for windows user:create file: c:\jiraconfig
 
 ### How to use
 jira number-1 number-2
+
 jira number-1 -m "your comment here" 

@@ -1,5 +1,5 @@
 {
-  "name": "taidiijiracmd",
+  "name": "jiracmd",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/houleitaidii/taidiijiracmd.git"
+    "url": "https://github.com/houleitaidii/jiracmd.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/houleitaidii/taidiijiracmd/issues"
+    "url": "https://github.com/houleitaidii/jiracmd/issues"
   },
   "bin": {
     "jira": "jirasearch.js"

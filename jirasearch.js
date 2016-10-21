@@ -84,6 +84,15 @@ var commands = function(program, jira){
 
 					result += str_comment;
 
+					var attachments = issue.fields.attachment
+					var attachment_length = attachments.length
+					if (attachment_length > 0) {
+						result += chalk.bold("Attachments:\n")
+						for (var i = 0; i < attachment_length; i++) {
+							result += attachments[i].content + "\n";
+						}
+					}
+					
 					console.log(result);
 				}
 			});
